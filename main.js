@@ -21,6 +21,8 @@ function Calc(operation, firstNum, secondNum) {
           };
 
       console.log(Calc('mult', 15, 67));
+      console.log(Calc('sub', 90, 3));
+
 
       ///////////////////
       // first version
