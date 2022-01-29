@@ -1,26 +1,54 @@
       
 function Calc(operation, firstNum, secondNum) {
-            
-    if (typeof firstNum !== 'number' || typeof 'secondNum' !== 'number') {
-        } else {
-        return ('error')  
-        } 
+ 
+    const operators = {
+          sum : firstNum + secondNum,
+          sub : firstNum - secondNum,
+          mult: firstNum * secondNum,
+          div:  firstNum / secondNum,             
+          };
 
-        switch (operation) {
-            case 'plus' :
-                return (firstNum + secondNum);
-            case 'minus' :
-                return   (firstNum - secondNum);
-            case 'multiply' :
-                return (firstNum * secondNum);
-            case 'share' :
-                return (firstNum / secondNum);
-            case 'degree' :
-                return (firstNum ** secondNum);  
-            default: 
-                return ('unknown operation');
-                
+          if (typeof firstNum !== 'number' || typeof secondNum !== 'number') {
+              return ('error')  
+          } 
+          
+          if(operation in operators) {
+              return operators[operation];
+            } else {
+              return 'unknown operation';
             }
-        }           
-            
-        console.log(Calc('multiply', 69, 3)); 
+
+          };
+
+      console.log(Calc('mult', 15, 67));
+
+      ///////////////////
+      // first version
+
+      // function Calc(operation, firstNum, secondNum) {
+          
+      //     if (typeof firstNum !== 'number' || typeof secondNum !== 'number') {
+      //         return ('error')  
+      //         } 
+      
+      //         switch (operation) {
+      //             case 'plus' :
+      //                 return (firstNum + secondNum);
+      //             case 'minus' :
+      //                 return   (firstNum - secondNum);
+      //             case 'multiply' :
+      //                 return (firstNum * secondNum);
+      //             case 'share' :
+      //                 return (firstNum / secondNum);
+      //             case 'degree' :
+      //                 return (firstNum ** secondNum);  
+      //             default: 
+      //                 return ('unknown operation');
+                      
+      //             }
+      //         }           
+                  
+
+      //         console.log(Calc('multiply', 69, 3)); 
+
+              
